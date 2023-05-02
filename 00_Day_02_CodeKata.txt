@@ -1,0 +1,663 @@
+
+/*
+1. You are given A = Length of a rectangle & B = breadth of a rectangle. Find its area “C”.
+
+(A and B are natural numbers)
+
+Input Description:
+The inputs are two natural numbers representing the length and the breadth of a rectangle.
+
+Output Description:
+Find the area of the rectangle formed by the provided input. Round off the answer to the first decimal place if required.
+
+Sample Input :
+2
+3
+Sample Output :
+6
+*/
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin,
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic
+
+  var myA = userInput[0];
+  var myB = userInput[1];
+
+  console.log(myA * myB);
+
+  //end-here
+});
+
+
+/*
+2. You are given three numbers A, B & C. Print the largest amongst these three numbers.
+
+Input Description:
+Three numbers are provided to you.
+
+Output Description:
+Find and print the largest among the three
+
+Sample Input :
+1
+2
+3
+Sample Output :
+3
+*/
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin,
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic
+
+  var myA = userInput[0];
+  var myB = userInput[1];
+  var myC = userInput[2];
+
+  if (myA > myB && myA > myC) {
+    console.log(myA);
+  } else if (myB > myA && myB > myC) {
+    console.log(myB);
+  } else if (myC > myA && myC > myB) {
+    console.log(myC);
+  }
+  //end-here
+});
+
+
+/*
+3. You are given with a number "N", find its cube.
+
+Input Description:
+A positive integer is provided.
+
+Output Description:
+Find the cube of the number.
+
+Sample Input :
+2
+Sample Output :
+8
+*/
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin,
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic
+
+  var myA = userInput[0];
+
+  console.log(myA ** 3);
+  //end-here
+});
+
+
+/*
+4. You are given a number A in Kilometers. Convert this into B: Meters and C: Centi-Metres.
+
+Input Description:
+A number "A" representing some distance in kilometer is provided to you as the input.
+
+Output Description:
+Convert and print this value in meters and centimeters.
+
+Sample Input :
+2
+Sample Output :
+2000
+200000
+*/
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin,
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic
+
+  var myA = userInput[0];
+
+  console.log(myA * 1000);
+  console.log(myA * 100000);
+
+  //end-here
+});
+
+
+/*
+5. You are given with a number A i.e. the temperature in Celcius. Write a program to convert this into Fahrenheit. 
+
+Note: In case of decimal values, round-off to two decimal places.
+
+Input Description:
+A number is provided in Celcius as the input of the program.
+
+Output Description:
+The output shall be the temperature converted into Fahrenheit corresponding to the input value print up to two decimal places and round off if required.
+
+Sample Input :
+12
+Sample Output :
+53.60
+*/
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin,
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic
+
+  var myA = userInput[0];
+  var myB = myA * (9 / 5) + 32;
+  console.log(myB.toFixed(2));
+  //end-here
+});
+
+
+/*
+6. You will be provided with a number. Print the number of days in the month corresponding to that number.
+
+Note: In case the input is February, print 28 days. If the Input is not in valid range print "Error".
+
+Input Description:
+The input is in the form of a number.
+
+Output Description:
+Find the days in the month corresponding to the input number. Print Error if the input is not in a valid range.
+
+Sample Input :
+8
+Sample Output :
+31
+*/
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin,
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic
+
+  var myInput = userInput[0];
+  var myMonth = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+
+  for (i = 0; i < myMonth.length; i++) {
+    if (myInput == myMonth[i]) {
+      if (myInput != 2) {
+        console.log("31");
+      } else if (myInput == 2) {
+        console.log("28");
+      }
+    }
+  }
+
+  if (myInput > 12 || myInput == 0) {
+    console.log("Error");
+  }
+
+  //end-here
+});
+
+
+/*
+7. Print the First 3 multiples of the given number "N". (N is a positive integer)
+
+Note: print the characters with a single space between them.
+
+Input Description:
+A positive integer is provided to you as an input.
+
+Output Description:
+Print the First 3 multiples of the number with single spaces between them as an output.
+
+Sample Input :
+2
+Sample Output :
+2 4 6
+*/
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin,
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic
+
+  var myInput = userInput[0];
+  var myArray = [];
+  if (myInput % 2 == 0) {
+    for (i = 1; i <= 3; i++) {
+      myArray.push(i * myInput);
+    }
+  }
+
+  console.log(myArray.join(" "));
+  //end-here
+});
+
+
+/*
+8. Write a code to get the input and print it 5 times.
+
+Input Description:
+A single line contains an integer N.
+
+Output Description:
+Output contains 5 lines with each line having the value N.
+
+Sample Input :
+4
+Sample Output :
+4
+4
+4
+4
+4
+*/
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin,
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic
+
+  var myInput = userInput[0];
+
+  for (i = 1; i <= 5; i++) {
+    console.log(myInput);
+  }
+  //end-here
+});
+
+
+/*
+9. You are provided with a number "N", Find the Nth term of the series: 1, 4, 9, 16, 25, 36, 49, 64, 81, .......
+
+(Print "Error" if N = negative value and 0 if N = 0).
+
+Input Description:
+An integer N is provided to you as the input.
+
+Output Description:
+Find the Nth term in the provided series.
+
+Sample Input :
+18
+Sample Output :
+324
+*/
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin,
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic
+
+  var myInput = userInput[0];
+
+  var myOutput = parseInt(myInput) + (myInput - 1) * myInput;
+
+  console.log(myOutput);
+  //end-here
+});
+
+
+/*
+10. You are provided with two numbers. Find and print the smaller number.
+
+Input Description:
+You are provided with two numbers as input.
+
+Output Description:
+Print the small number out of the two numbers.
+
+Sample Input :
+23 1
+Sample Output :
+1
+*/
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin,
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic
+
+  var myInput01 = userInput[0].split(" ")[0];
+  var myInput02 = userInput[0].split(" ")[1];
+  if (myInput01 < myInput02) {
+    console.log(myInput01);
+  } else {
+    console.log(myInput02);
+  }
+  //end-here
+});
+
+
+/*
+11. The area of an equilateral triangle is ¼(√3a2) where "a" represents a side of the triangle. You are provided with the side "a". Find the area of the equilateral triangle.
+
+Input Description:
+The side of an equilateral triangle is provided as the input.
+
+Output Description:
+Find the area of the equilateral triangle and print the answer up to 2 decimal places after rounding off.
+
+Sample Input :
+20
+Sample Output :
+173.21
+*/
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin,
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic
+
+  var myInput = userInput[0];
+
+  var myValue = (Math.sqrt(3) / 4) * myInput * myInput;
+  console.log(myValue.toFixed(2));
+  //end-here
+});
+
+
+/*
+12. You are given Two Numbers, A and B. If C = A + B. Find C.
+
+Note: Round off the output to a single decimal place.
+
+Input Description:
+You are provided with two numbers A and B.
+
+Output Description:
+Find the sum of the two numbers (A + B)
+
+Sample Input :
+1
+1
+Sample Output :
+2
+*/
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin,
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic
+
+  var myA = parseInt(userInput[0]);
+  var myB = parseInt(userInput[1]);
+  var myC = myA + myB;
+  console.log(myC.toFixed(1));
+
+  //end-here
+});
+
+
+/*
+13. You are provided with the radius of a circle "A". Find the length of its circumference.
+
+Note: In case the output is coming in decimal, roundoff to 2nd decimal place. In case the input is a negative number, print "Error".
+
+Input Description:
+The Radius of a circle is provided as the input of the program.
+
+Output Description:
+Calculate and print the Circumference of the circle corresponding to the input radius up to two decimal places.
+
+Sample Input :
+2
+Sample Output :
+12.57
+*/
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin,
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic
+
+  var myInput = userInput[0];
+  var myPI = 22 / 7;
+
+  var myCircumference = 2 * myPI * myInput;
+  console.log(myCircumference.toFixed(2));
+  //end-here
+});
+
+
+/*
+14. Let "A"  be a string. Remove all the whitespaces and find it's length.
+
+Input Description:
+A string is provide as an input
+
+Output Description:
+Remove all the whitespaces and then print the length of the remaining string.
+
+Sample Input :
+Lorem Ipsum
+Sample Output :
+10
+*/
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin,
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic
+
+  var myInput = String(userInput[0]);
+  var myString = myInput.replace(" ", "");
+  console.log(myString.length);
+  //end-here
+});
+
+
+/*
+15. Write a code to get an integer N and print the values from N to 1.
+
+Input Description:
+A single line contains an integer N.
+
+Output Description:
+Print the values from N to 1 in a separate line.
+
+Sample Input :
+10
+Sample Output :
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+*/
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin,
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic
+
+  var myInput = userInput[0];
+
+  for (i = myInput; i >= 1; i--) {
+    console.log(i);
+  }
+  //end-here
+});
